@@ -1,0 +1,77 @@
+﻿<Window x:Class="Tema3_Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_Formulario"
+        mc:Ignorable="d"
+        Title="Formulario" Height="450" Width="800" Icon="Imagenes\48 (1).ico">
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="40" FontFamily="Arial" FontWeight="Bold">Formulario</TextBlock>
+        <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
+            <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="20" FontFamily="Arial" FontStyle="Italic" >Juan Mateo</TextBlock>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Width="100">Aceptar</Button>
+                <Button Width="100">Cancelar</Button>
+            </StackPanel>
+        </DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="Imagenes\foto.jpg" Stretch="Fill" Margin="20,0,20,10"/>
+            <StackPanel Grid.Column="0">
+                <Border BorderThickness="3" BorderBrush="Black" CornerRadius="10" Background="LightGreen">
+                    <UIElement.Effect>
+                        <DropShadowEffect/>
+                    </UIElement.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="5" FontSize="12">Nombre</TextBlock>
+                        <TextBlock Margin="5" Grid.Row="1">Edad</TextBlock>
+                        <TextBlock Margin="5" Grid.Row="2">Dirección</TextBlock>
+                        <TextBox Grid.Column="1" Margin="5"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Margin="5"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Margin="5"/>
+                        <Image Source="Imagenes/info.png" Grid.Column="2" ToolTip="Maximo 100 caracteres"/>
+                        <Image Source="Imagenes/info.png" Grid.Row="1" Grid.Column="2" ToolTip="Numero entero entre 0 y 100"/>
+                        <Image Source="Imagenes/info.png" Grid.Row="2" Grid.Column="2" ToolTip="Incluir el codigo postal"/>
+                    </Grid>
+                </Border>
+                <Border BorderThickness="3" BorderBrush="Black" CornerRadius="10" Background="LightPink">
+                    <UIElement.Effect>
+                        <DropShadowEffect/>
+                    </UIElement.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <GroupBox Header="Aficiones" Width="220" HorizontalAlignment="Left" Margin="10,0,30,10">
+                            <StackPanel Margin="5">
+                                <CheckBox>Hacer deporte</CheckBox>
+                                <CheckBox>Viajar</CheckBox>
+                                <CheckBox>Ver series</CheckBox>
+                                <CheckBox>Leer comics</CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Estado civil" Width="220" HorizontalAlignment="Left" Margin="30,0,0,10">
+                            <StackPanel Margin="5">
+                                <RadioButton IsChecked="True">Soltero</RadioButton>
+                                <RadioButton>Casado</RadioButton>
+                                <RadioButton>Divorciado</RadioButton>
+                                <RadioButton>Viudo</RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
