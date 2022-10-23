@@ -6,13 +6,27 @@
         xmlns:local="clr-namespace:Tema3_Formulario"
         mc:Ignorable="d"
         Title="Formulario" Height="450" Width="800" Icon="Imagenes\48 (1).ico">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="100"/>
+        </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="DockPanel.Dock" Value="Top"/>
+        </Style>
+    </Window.Resources>
     <DockPanel>
-        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="40" FontFamily="Arial" FontWeight="Bold">Formulario</TextBlock>
+        <TextBlock TextAlignment="Center" FontSize="40" FontWeight="Bold">Formulario</TextBlock>
         <DockPanel LastChildFill="False" DockPanel.Dock="Bottom">
-            <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="20" FontFamily="Arial" FontStyle="Italic" >Juan Mateo</TextBlock>
+            <TextBlock TextAlignment="Center" FontSize="20" FontStyle="Italic" >Juan Mateo</TextBlock>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
-                <Button Width="100">Aceptar</Button>
-                <Button Width="100">Cancelar</Button>
+                <Button>Aceptar</Button>
+                <Button>Cancelar</Button>
             </StackPanel>
         </DockPanel>
         <Grid>
@@ -53,7 +67,7 @@
                         <DropShadowEffect/>
                     </UIElement.Effect>
                     <StackPanel Orientation="Horizontal">
-                        <GroupBox Header="Aficiones" Width="220" HorizontalAlignment="Left" Margin="10,0,30,10">
+                        <GroupBox Header="Aficiones" Margin="10,0,30,10">
                             <StackPanel Margin="5">
                                 <CheckBox>Hacer deporte</CheckBox>
                                 <CheckBox>Viajar</CheckBox>
@@ -61,7 +75,7 @@
                                 <CheckBox>Leer comics</CheckBox>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Estado civil" Width="220" HorizontalAlignment="Left" Margin="30,0,0,10">
+                        <GroupBox Header="Estado civil" Margin="30,0,0,10">
                             <StackPanel Margin="5">
                                 <RadioButton IsChecked="True">Soltero</RadioButton>
                                 <RadioButton>Casado</RadioButton>
